@@ -14,8 +14,17 @@
 #include <opencv2/opencv.hpp>
 #endif /* HAVE_OPENCV */
 
+/*!
+@defgroup color_transfer Color Transfer functionality
+*/
+
+//! @addtogroup color_transfer
+//! @{
+
+//! @brief main namespace for my project
 namespace stray {
 
+//! @brief The codes of color convertion type.
 enum ColorConvertionCodes { 
     COLOR_BGR2LAlphaBeta = 0,
     COLOR_LAlphaBeta2BGR = 1
@@ -23,11 +32,12 @@ enum ColorConvertionCodes {
 #if HAVE_OPENCV
 
 /*! @brief Convert the color space of a image.
- * 
+ *
  * It's similar to cv::cvtColor()
  * @param _src input array of the image.
  * @param _out output array of the image.
- * @param _mode color convertion code. 
+ * @param _mode color convertion code.
+ * @see ColorConvertionCodes
 */
 void convertColor(cv::InputArray _src, cv::OutputArray _out, int _mode);
 
@@ -41,5 +51,5 @@ void colorTransfer(cv::InputArray _ref, cv::InputOutputArray _target);
 #endif /* HAVE_OPENCV */
 
 }
-
-#endif /* !COLOR_TRANSFER_HPP */
+//! @}
+#endif /* _COLOR_TRANSFER_HPP_ */

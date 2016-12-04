@@ -107,7 +107,7 @@ void LAlphaBeta2BGR(cv::InputArray _src, cv::OutputArray _dst) {
     }
 }
 
-}
+} /* anonymous namespace */
 
 void convertColor(cv::InputArray _src, cv::OutputArray _dst, int _mode) {
     typedef void (*func_t)(cv::InputArray /* src */, cv::OutputArray /* dst */);
