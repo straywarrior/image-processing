@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+# Building directory
+build/
+
+# Temporary files
+*.swp
