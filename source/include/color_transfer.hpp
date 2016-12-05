@@ -43,6 +43,9 @@ void convertColor(cv::InputArray _src, cv::OutputArray _out, int _mode);
 
 /*! @brief Transfer color of an image to another image (Color Match).
  *
+ * This function implements a plain version of color transfer algorithm
+ * described in Reinhard's paper @cite reinhard2001color.
+ * It's similar to Photoshop's Match Color.
  * @param _ref input array of the image that will be referref to.
  * @param _target input-output array of the image that will be transfered.
 */
